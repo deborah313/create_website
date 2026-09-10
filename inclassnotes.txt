@@ -1,0 +1,47 @@
+Today in class
+9/9
+
+docker file, image, and container
+
+file is the recipe for building an image aka instructions
+when we create a docker file in a known vscode environment, it will make a .txt which won't work
+
+image file is following instructions to build the application
+
+container - we run the container
+
+--- checking to see if we have an image or not
+docker -ps (lists all )
+docker -a
+docker images
+docker rmi
+
+build image, tag its name and build on top of it?
+
+docker build -t maazajad .
+-t stands for tag or it's name
+. is important, we created an image called maazajad
+
+docker ps -a (shows all running containers)
+docker stop [container name]
+docker run -d --name [contianer name] -p 8080:80 maazanjad
+
+
+volume in Docker is important
+
+ex. docker stop nick
+now we should only hve 3 containers, but we didn't name one of the containers 
+now we have to find the name in the containers
+
+ex. docker rm elastic_golick
+
+imagine if we had data there?
+volume, if we delete the data in the container then it keeps it within
+
+ex. volume create [name]
+docker volume ls  ## shows a list of all of our volumes
+
+Composed in Docker is an importantas well
+
+everything in one container? separate containers?
+
