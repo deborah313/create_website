@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deborah Trivia - Deborah Akran</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="trivia.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="name-title">Deborah Akran<span class="brand-dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="cv.html">CV</a>
+                <a href="trivia.html" aria-current="page">Trivia</a>
+            </div>
+        </nav>
+        <main class="trivia-page">
+            <p class="eyebrow">A little pop quiz</p>
+            <h1 class="page-title">How well do you know Deborah?</h1>
+            <p class="trivia-intro">Three questions. Bragging rights on the line. All the clues are on <a href="index.html">my homepage</a>.</p>
+            <noscript><p>Please enable JavaScript to play the quiz.</p></noscript>
+            <section id="quiz" class="quiz-card" aria-label="Deborah trivia" hidden>
+                <p id="progress" class="eyebrow"></p>
+                <h2 id="question" tabindex="-1"></h2>
+                <div id="answers" class="quiz-answers" role="group" aria-labelledby="question"></div>
+                <p id="feedback" class="quiz-feedback" role="status"></p>
+                <button id="next" class="button" type="button" hidden>Next question &rarr;</button>
+            </section>
+            <section id="tip" class="quiz-card tip-card" aria-labelledby="tip-heading" hidden>
+                <p class="eyebrow">Quiz complete · Checkout time</p>
+                <p id="score" class="quiz-score"></p>
+                <h2 id="tip-heading" tabindex="-1">Add a tip?</h2>
+                <p>The screen is just going to ask you a quick question…</p>
+                <p class="pretend-note">Just for fun. No payment, no charge, only imaginary gratitude.</p>
+                <div class="tip-options" role="group" aria-label="Choose a pretend tip">
+                    <button type="button" data-tip="15">15%<span>Nice quiz!</span></button>
+                    <button type="button" data-tip="20">20%<span>Big fan.</span></button>
+                    <button type="button" data-tip="25">25%<span>Deborah for president.</span></button>
+                </div>
+                <button type="button" class="no-tip" data-tip="0">No tip</button>
+            </section>
+            <section id="receipt" class="quiz-card tip-card" aria-labelledby="receipt-heading" hidden>
+                <p class="eyebrow">Your imaginary receipt</p>
+                <h2 id="receipt-heading" tabindex="-1">Thanks for playing!</h2>
+                <p id="tip-message"></p>
+                <p class="pretend-note">Total charged: $0.00. Always.</p>
+                <button id="restart" class="button" type="button">Play again</button>
+                <a class="text-link" href="index.html">Back to Deborah's homepage</a>
+            </section>
+        </main>
+        <footer>Deborah Akran <span>Curiosity. Creativity. Code.</span></footer>
+    </div>
+</body>
+</html>

@@ -52,6 +52,8 @@ footer { border-top: 1px solid var(--line); padding: 1.5rem 0; display: flex; ju
 @media (max-width: 850px) {
     .container { padding: 0 1.5rem; }
     .profile-section { grid-template-columns: 250px minmax(0, 1fr); gap: 2rem; }
+    .cv-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .cv-side-col { border-top: 1px solid var(--line); padding-top: 3rem; }
 }
 @media (max-width: 640px) {
     nav { flex-wrap: wrap; gap: .8rem; margin-bottom: 2rem; padding: 1.2rem 0; }
@@ -66,4 +68,63 @@ footer { border-top: 1px solid var(--line); padding: 1.5rem 0; display: flex; ju
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; }
     .project-card:hover { transform: none; }
+}
+
+/* CV Page Styles */
+.cv-layout { padding-bottom: 4rem; }
+.cv-header { border-bottom: 1px solid var(--line); padding-bottom: 2.5rem; margin-bottom: 3.5rem; }
+.cv-header .page-title { margin-bottom: .5rem; }
+.cv-actions { margin-top: 1.5rem; display: flex; gap: 1rem; }
+.cv-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 4.5rem; }
+.cv-main-col { display: flex; flex-direction: column; gap: 3rem; }
+.cv-side-col { display: flex; flex-direction: column; gap: 3rem; }
+.cv-block { display: flex; flex-direction: column; gap: 1.5rem; }
+.cv-section-title { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 400; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: .5rem; margin-bottom: .5rem; }
+.cv-item { display: flex; flex-direction: column; gap: .5rem; }
+.cv-item-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.cv-item-title { font-size: 1.1rem; font-weight: 650; color: var(--ink); }
+.cv-item-date { font-size: .85rem; color: var(--muted); font-weight: 500; white-space: nowrap; }
+.cv-item-subtitle { font-size: .9rem; color: var(--accent); font-weight: 500; }
+.cv-item-bullets { padding-left: 1.25rem; font-size: .9rem; color: var(--muted); display: flex; flex-direction: column; gap: .4rem; }
+.cv-item-bullets li { list-style-type: square; }
+.skill-category { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+.skill-cat-title { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); font-weight: 650; }
+.skills-list { display: flex; flex-wrap: wrap; gap: .4rem; }
+.skills-list .skill-tag { padding: .3rem .75rem; font-size: .8rem; border-radius: 4px; }
+.cv-contact-list { list-style: none; display: flex; flex-direction: column; gap: .75rem; font-size: .85rem; color: var(--muted); }
+.cv-contact-list i { color: var(--accent); width: 16px; margin-right: .5rem; }
+
+/* Deborah trivia */
+.trivia-page { max-width: 720px; margin: 0 auto; padding-bottom: 4rem; }
+.trivia-page .page-title { margin-bottom: 1rem; }
+.trivia-intro { color: var(--muted); margin-bottom: 2rem; }
+.quiz-card { padding: clamp(1.25rem, 4vw, 2.5rem); background: #fdfcf8; border: 1px solid var(--line); border-radius: 16px; }
+.quiz-card[hidden], .quiz-card [hidden] { display: none; }
+.quiz-card h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); line-height: 1.35; margin-bottom: 1.5rem; }
+.quiz-card button { font: inherit; cursor: pointer; min-height: 48px; }
+.quiz-card button:focus-visible { outline: 3px solid #8a643c; outline-offset: 4px; }
+.quiz-card .button { border: 0; }
+.quiz-answers { display: grid; gap: .75rem; }
+.quiz-answers button, .no-tip { border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--ink); padding: .85rem 1rem; text-align: left; }
+.quiz-answers button:hover:not([aria-disabled]) { background: #eeeee4; border-color: var(--accent); }
+.quiz-answers button[aria-disabled] { cursor: default; }
+.quiz-answers .answer-correct { background: #e5eddf; border-color: #435a43; }
+.quiz-answers .answer-incorrect { background: #f8e8df; border-color: #a56642; }
+.quiz-feedback { margin: 1.25rem 0; color: var(--accent); }
+.quiz-feedback:empty { margin: 0; }
+.tip-card { text-align: center; }
+.tip-card h2 { font-size: 2.3rem; margin: 1rem 0 .5rem; }
+.quiz-score { color: var(--accent); font-weight: 600; }
+.pretend-note { color: var(--muted); font-size: .85rem; margin: 1rem 0 1.5rem; }
+.tip-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+.tip-options button { border: 0; border-radius: 8px; padding: 1.25rem .5rem; background: var(--accent); color: white; font-size: 1.75rem; font-weight: 600; }
+.tip-options button:hover { background: #2c402e; }
+.tip-options span { display: block; font-size: .75rem; font-weight: 400; margin-top: .4rem; }
+.no-tip { width: 100%; text-align: center; margin-top: .75rem; }
+.no-tip:hover { background: #eeeee4; }
+#receipt .text-link { display: block; margin-top: 1.25rem; }
+@media (max-width: 400px) {
+    .tip-options { gap: .4rem; }
+    .tip-options button { font-size: 1.4rem; }
+    .tip-options span { font-size: .7rem; }
 }
